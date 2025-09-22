@@ -59,7 +59,7 @@ Built using **HTML, CSS, and basic JavaScript** to simulate real functionality.
 ## 📸 Screenshots
 
 ### User login
-![User Login](screenshots/user_login.png)
+![User Login](user_login.png)
 
 ### Doctor Login
 ![Doctor Login](screenshots/doctor_login.png)
@@ -90,6 +90,7 @@ Built using **HTML, CSS, and basic JavaScript** to simulate real functionality.
 ---
 
 👨‍⚕️ Designed as a **learning project** for building clean UIs with HTML, CSS, and JS.
+
 
 
 

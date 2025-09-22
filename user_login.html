@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>User Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Sidebar Toggle -->
+  <div id="menuToggle">☰ Menu</div>
+
+  <!-- Sidebar -->
+  <div class="sidebar" id="sidebar">
+    <h3>📞 Doctor Calling</h3>
+    <a href="#">Normal Call - ₹200</a>
+    <a href="#">Emergency Call - ₹500</a>
+    <a href="index.html">Logout</a>
+  </div>
+
+  <!-- Main Content -->
+  <div class="container user-dashboard">
+    <h2>User Dashboard</h2>
+    <p>Select a service below:</p>
+    <div class="services">
+      <div class="service">👁 Eye Checkup</div>
+      <div class="service">⚖ Fat Checkup</div>
+      <div class="service">👅 Tongue Checkup</div>
+      <div class="service">🫁 Lungs Checkup</div>
+      <div class="service">🧘 Yoga</div>
+      <div class="service">🧘‍♂️ Meditation</div>
+    </div>
+  </div>
+
+  <script>
+    // Sidebar toggle
+    const toggle = document.getElementById('menuToggle');
+    const sidebar = document.getElementById('sidebar');
+    toggle.onclick = () => {
+      sidebar.style.left = sidebar.style.left === '0px' ? '-250px' : '0px';
+    };
+
+    // Animate services
+    const services = document.querySelectorAll('.service');
+    services.forEach((service, index) => {
+      setTimeout(() => service.classList.add('animate'), index * 200);
+    });
+  </script>
+</body>
+</html>

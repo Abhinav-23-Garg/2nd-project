@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Doctor Login</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h2>Doctor Login</h2>
+    <form action="doctor_login.html" method="get">
+      <input type="text" name="doctor_id" placeholder="Enter Doctor ID (10 digits)" pattern="[0-9]{10}" required>
+      <input type="password" name="password" placeholder="Enter 6-digit Password" pattern="[0-9]{6}" required>
+      <button type="submit">Login</button>
+      <button type="button" class="back-btn" onclick="location.href='index.html'">⬅ Back</button>
+    </form>
+  </div>
+</body>
+</html>

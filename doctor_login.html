@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Doctor Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Sidebar Toggle -->
+  <div id="menuToggle">☰ Menu</div>
+
+  <!-- Sidebar -->
+  <div class="sidebar" id="sidebar">
+    <h3>📞 Doctor Actions</h3>
+    <a href="#">Attend Normal Call</a>
+    <a href="#">Attend Emergency Call</a>
+    <a href="index.html">Logout</a>
+  </div>
+
+  <!-- Main -->
+  <div class="container">
+    <h2>Welcome, Doctor</h2>
+    <p>You are logged in to your dashboard.</p>
+    <div class="btn-group">
+      <a href="#" class="btn btn-attend">📞 Attend Call</a>
+      <a href="patient_queue.html" class="btn btn-queue">👥 View Patient Queue</a>
+      <a href="doctor_registration.html" class="btn btn-logout">🚪 Logout</a>
+    </div>
+  </div>
+
+  <script>
+    const toggle = document.getElementById('menuToggle');
+    const sidebar = document.getElementById('sidebar');
+    toggle.onclick = () => {
+      sidebar.style.left = sidebar.style.left === '0px' ? '-250px' : '0px';
+    };
+  </script>
+</body>
+</html>

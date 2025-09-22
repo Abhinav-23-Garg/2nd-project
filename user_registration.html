@@ -5,16 +5,27 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>User Registration</title>
   <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
 </head>
 <body>
   <div class="container">
     <h2>User Registration</h2>
-    <form action="user_login.html" method="get">
+    <form action="user_login.html" method="get" id="userForm">
       <input type="text" name="phone" placeholder="Enter Phone Number" maxlength="10" required pattern="[0-9]{10}">
       <input type="date" name="dob" required>
       <button type="submit">Submit</button>
       <button type="button" class="back-btn" onclick="location.href='index.html'">⬅ Back</button>
     </form>
   </div>
+
+  <script>
+    document.getElementById("userForm").addEventListener("submit", e => {
+      const phone = document.querySelector("[name='phone']").value;
+      if (phone.length !== 10) {
+        e.preventDefault();
+        alert("Phone number must be 10 digits.");
+      }
+    });
+  </script>
 </body>
 </html>

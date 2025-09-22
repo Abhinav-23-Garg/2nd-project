@@ -1,21 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
 :root {
   --primary: #3498db;
   --secondary: #2ecc71;
   --danger: #e74c3c;
   --dark: #2c3e50;
   --light-bg: rgba(255, 255, 255, 0.95);
-  --font: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: var(--font);
+  font-family: 'Poppins', sans-serif;
 }
 
 body {
-  margin: 0;
   background: url('https://images.unsplash.com/photo-1580281657520-6f1a74f9bbd5?fit=crop&w=1950&q=80') no-repeat center center/cover;
   min-height: 100vh;
   display: flex;
@@ -30,8 +30,14 @@ body {
   border-radius: 15px;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
   width: 90%;
-  max-width: 450px;
+  max-width: 480px;
   text-align: center;
+  animation: fadeIn 0.6s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
 h1, h2 {
@@ -39,6 +45,9 @@ h1, h2 {
   color: var(--dark);
 }
 
+p { margin-bottom: 15px; color: #333; }
+
+/* Inputs & Buttons */
 input, button {
   width: 100%;
   padding: 12px;
@@ -68,7 +77,6 @@ button:hover { background-color: #2980b9; }
   padding: 14px;
   font-size: 18px;
   font-weight: bold;
-  border: none;
   border-radius: 12px;
   cursor: pointer;
   transition: 0.3s;
@@ -91,6 +99,7 @@ button:hover { background-color: #2980b9; }
   padding-top: 60px;
   transition: left 0.3s ease;
   box-shadow: 4px 0 12px rgba(0,0,0,0.2);
+  z-index: 1000;
 }
 .sidebar h3 {
   color: white;
@@ -106,7 +115,7 @@ button:hover { background-color: #2980b9; }
 }
 .sidebar a:hover { background: #2980b9; }
 
-/* Menu toggle button */
+/* Menu toggle */
 #menuToggle {
   position: absolute;
   top: 20px;
@@ -118,6 +127,7 @@ button:hover { background-color: #2980b9; }
   cursor: pointer;
   font-size: 18px;
   box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  z-index: 1100;
 }
 
 /* Services (User Dashboard) */
@@ -133,11 +143,9 @@ button:hover { background-color: #2980b9; }
   border-radius: 12px;
   box-shadow: 0 5px 15px rgba(0,0,0,0.2);
   font-weight: bold;
-  transition: 0.3s;
   opacity: 0;
   transform: translateY(40px);
 }
-.service:hover { transform: scale(1.05); background: #ecf0f1; }
 .service.animate { animation: slideIn 0.6s forwards; }
 @keyframes slideIn {
   to { opacity: 1; transform: translateY(0); }
@@ -164,4 +172,8 @@ th {
   .container { width: 95%; padding: 20px; }
   h2 { font-size: 22px; }
   .services { grid-template-columns: 1fr 1fr; }
+  #menuToggle { font-size: 14px; padding: 8px; }
 }
+
+
+

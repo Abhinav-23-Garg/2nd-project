@@ -47,9 +47,11 @@ Built using **HTML, CSS, and basic JavaScript** to simulate real functionality.
 ├── doctor_login.html # Doctor dashboard
 ├── patient_queue.html # Patient queue (interactive)
 ├── style.css # Global stylesheet
-├── screenshots/ # Screenshots folder
-│ ├── user_login.png
-│ ├── doctor_login.png
+├── index.png
+├── user_registration.png
+├── user_login.png
+├── doctor_registration.png
+├── doctor_login.png
 ├── README.md # Documentation
 
 
@@ -58,8 +60,17 @@ Built using **HTML, CSS, and basic JavaScript** to simulate real functionality.
 
 ## 📸 Screenshots
 
+### Index
+![Index](index.png)
+
+### User Registration
+![User Registration](user_registration.png)
+
 ### User login
 ![User Login](user_login.png)
+
+### Doctor login
+![Doctor Login](doctor_login.png)
 
 ### Doctor Login
 ![Doctor Login](doctor_login.png)
@@ -90,6 +101,7 @@ Built using **HTML, CSS, and basic JavaScript** to simulate real functionality.
 ---
 
 👨‍⚕️ Designed as a **learning project** for building clean UIs with HTML, CSS, and JS.
+
 
 
 

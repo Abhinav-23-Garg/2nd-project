@@ -47,12 +47,9 @@ Built using **HTML, CSS, and basic JavaScript** to simulate real functionality.
 ├── doctor_login.html # Doctor dashboard
 ├── patient_queue.html # Patient queue (interactive)
 ├── style.css # Global stylesheet
-├── favicon.ico # Browser tab icon
 ├── screenshots/ # Screenshots folder
-│ ├── landing.png
-│ ├── user_dashboard.png
-│ ├── doctor_dashboard.png
-│ ├── patient_queue.png
+│ ├── user_login.png
+│ ├── doctor_login.png
 ├── README.md # Documentation
 
 
@@ -93,6 +90,7 @@ Built using **HTML, CSS, and basic JavaScript** to simulate real functionality.
 ---
 
 👨‍⚕️ Designed as a **learning project** for building clean UIs with HTML, CSS, and JS.
+
 
 
 

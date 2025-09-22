@@ -81,7 +81,7 @@ Built using **HTML, CSS, and basic JavaScript** to simulate real functionality.
 ---
 
 ## 🌍 Live Demo
-👉 (https://github.com/Abhinav-23-Garg/Mediconnect-Help-System.git)
+👉 (https://mediconnect-hm.netlify.app)
 
 ---
 
@@ -101,6 +101,7 @@ Built using **HTML, CSS, and basic JavaScript** to simulate real functionality.
 ---
 
 👨‍⚕️ Designed as a **learning project** for building clean UIs with HTML, CSS, and JS.
+
 
 
 

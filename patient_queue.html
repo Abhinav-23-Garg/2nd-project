@@ -5,22 +5,39 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Patient Queue</title>
   <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
 </head>
 <body>
   <div class="container">
     <h2>Patient Queue</h2>
-    <table>
+    <button onclick="addPatient()">+ Add Patient</button>
+    <table id="queueTable">
       <tr>
         <th>ID</th>
         <th>Name</th>
         <th>Issue</th>
-        <th>Status</th>
+        <th>Action</th>
       </tr>
-      <tr><td>101</td><td>Rahul</td><td>Eye Pain</td><td>Waiting</td></tr>
-      <tr><td>102</td><td>Anita</td><td>Fatigue</td><td>Waiting</td></tr>
-      <tr><td>103</td><td>Vikram</td><td>Breathing Issue</td><td>Emergency</td></tr>
+      <tr>
+        <td>101</td><td>Rahul</td><td>Eye Pain</td>
+        <td><button onclick="this.parentElement.parentElement.remove()">Remove</button></td>
+      </tr>
+      <tr>
+        <td>102</td><td>Anita</td><td>Fatigue</td>
+        <td><button onclick="this.parentElement.parentElement.remove()">Remove</button></td>
+      </tr>
     </table>
     <button class="back-btn" onclick="location.href='doctor_login.html'">⬅ Back</button>
   </div>
+
+  <script>
+    function addPatient() {
+      const table = document.getElementById("queueTable");
+      const row = table.insertRow();
+      row.innerHTML = `<td>NEW</td><td>Guest</td><td>General</td>
+        <td><button onclick="this.parentElement.parentElement.remove()">Remove</button></td>`;
+    }
+  </script>
 </body>
 </html>
+

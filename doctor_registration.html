@@ -5,16 +5,30 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Doctor Login</title>
   <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
 </head>
 <body>
   <div class="container">
     <h2>Doctor Login</h2>
-    <form action="doctor_login.html" method="get">
+    <form action="doctor_login.html" method="get" id="doctorForm">
       <input type="text" name="doctor_id" placeholder="Enter Doctor ID (10 digits)" pattern="[0-9]{10}" required>
-      <input type="password" name="password" placeholder="Enter 6-digit Password" pattern="[0-9]{6}" required>
+      <input type="password" id="password" name="password" placeholder="Enter 6-digit Password" pattern="[0-9]{6}" required>
+      <label><input type="checkbox" onclick="document.getElementById('password').type = this.checked ? 'text' : 'password'"> Show Password</label>
       <button type="submit">Login</button>
       <button type="button" class="back-btn" onclick="location.href='index.html'">⬅ Back</button>
     </form>
   </div>
+
+  <script>
+    document.getElementById("doctorForm").addEventListener("submit", e => {
+      const id = document.querySelector("[name='doctor_id']").value;
+      const pass = document.querySelector("[name='password']").value;
+      if (id.length !== 10 || pass.length !== 6) {
+        e.preventDefault();
+        alert("Doctor ID must be 10 digits and Password must be 6 digits.");
+      }
+    });
+  </script>
 </body>
 </html>
+
